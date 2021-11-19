@@ -1,3 +1,135 @@
 @import './globals';
 @import './variables';
 @import './config';
+
+body{
+    background: $v-dark-blue;
+}
+
+#card-container{
+    max-width: 20.625rem;
+    height: auto;
+    margin: 10.9375rem auto;
+
+    @include desktop{
+        width: calc(100% - 100px);
+        max-width: 69.6875rem;
+        @include flexcenter(row-reverse);
+        max-height: 30.9375rem;
+    }
+
+    #card-image{
+        position: relative;
+        top: 0;
+        height: 14.375rem;
+
+        @include desktop{
+            min-width: 50%;
+            height: 30.9375rem;
+        }
+        
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 14.375rem;
+            background-color: $t-overlay;
+            z-index: 3;
+
+            @include desktop{
+                min-width: 100%;
+                height: 30.9375rem;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 14.375rem;
+            z-index: 2;
+            object-fit: cover;
+
+            @include desktop{
+                min-width: 100%;
+                height: 30.9375rem;
+            }
+        }
+    }
+
+    #card-info{
+        padding: 2.8125rem 2rem;
+        @include flexcenter(column);
+        text-align: center;
+        background-color: $dark-blue;
+
+        @include desktop {
+            height: 30.9375rem;
+            padding-right: 9rem;
+            justify-content: left;
+        }
+
+        h1{
+            font-family: $main-font-fam;
+            color: $white;
+            padding-bottom: 1.25rem;
+
+            @include desktop {
+                font-size: 3rem;
+                text-align: left;
+            }
+
+            span {
+                color: $s-violet;
+            }
+        }
+
+        p{
+            color: $t-white-main;
+            font-size: 15px;
+            font-weight: 400;
+            padding-bottom: 2.8125rem;
+            font-family: $main-font-fam;
+
+            
+            @include desktop {
+                font-size: 1.3rem;
+                text-align: left;
+                line-height: 2.1875rem;
+            }
+        }
+
+        #stats{
+            @include flexcenter(column);
+
+            @include desktop {
+                @include flexcenter(row);
+            }
+        }
+
+        .stat-info:not(:nth-of-type(3)) {
+            padding-bottom: 1.895rem;
+
+            @include desktop {
+                padding-bottom: 0;
+                padding-right: 2.495rem;
+            }
+        }
+
+        h3{
+            color: $white;
+            font-weight: 700;
+            font-size: 1.5625rem;
+            font-family: $main-font-fam;
+
+            span{
+                font-weight: 400;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                color: $t-white-main;
+            }
+        }
+    }
+}
