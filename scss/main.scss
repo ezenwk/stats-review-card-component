@@ -1,8 +1,4 @@
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+@import "/scss/globals";
+@import "/scss/variables";
+@import "/scss/config";
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
