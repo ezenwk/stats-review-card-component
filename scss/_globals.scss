@@ -1,6 +1,6 @@
 // GLOBAL STYLES
 
-*,*::after,*::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +8,7 @@
 
 ol, ul {
     list-style-type: none;
+    
 }
 
 a {
