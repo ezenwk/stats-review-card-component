@@ -9,13 +9,14 @@ body{
 #card-container{
     max-width: 20.625rem;
     height: auto;
-    margin: 10.9375rem auto;
+    margin: 4.75rem auto;
 
     @include desktop{
         width: calc(100% - 100px);
         max-width: 69.6875rem;
         @include flexcenter(row-reverse);
         max-height: 30.9375rem;
+        margin: 10.9375rem auto;
     }
 
     #card-image{
